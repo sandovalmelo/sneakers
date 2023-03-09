@@ -36,3 +36,23 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
+.btn {
+	color: $white;
+	background-color: $orange;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	font-size: 0.85rem;
+	font-weight: 700;
+	border: none;
+	height: 2.75rem;
+	width: 100%;
+	border-radius: 8px;
+
+	img {
+		width: 18px;
+		height: 18px;
+	}
+}
