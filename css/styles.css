@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: white; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+/*# sourceMappingURL=styles.css.map */
