@@ -1,0 +1,30 @@
+.menu {
+	padding: 1.5rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	&-user-info {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	&-avatar {
+		width: 25px;
+		height: 25px;
+	}
+}
+
+@media (max-width: 899px) {
+	.menu {
+		&-nav {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: $white;
+			display: none;
+		}
+	}
+}
