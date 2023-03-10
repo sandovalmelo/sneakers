@@ -89,5 +89,33 @@
 			grid-template-columns: repeat(4, 1fr);
 			gap: 1rem;
 		}
+
+		&-name {
+			font-size: 2.5rem;
+		}
+
+		&-description {
+			font-size: 1rem;
+		}
+
+		&-price {
+			display: block;
+			position: relative;
+
+			h3 {
+				margin-bottom: 0.5rem;
+			}
+
+			span {
+				position: absolute;
+				top: 3px;
+				left: 100px;
+			}
+
+			p {
+				display: inline-block;
+				font-size: 0.85rem;
+			}
+		}
 	}
 }
