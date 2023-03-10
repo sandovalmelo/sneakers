@@ -25,12 +25,44 @@
 
 @media (max-width: 899px) {
 	.menu {
+		&-icon {
+			z-index: 100;
+			position: absolute;
+		}
+
+		&-logo {
+			margin-left: 2rem;
+		}
+
 		&-nav {
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: $white;
+			background-color: $black-opacity;
 			display: none;
+			width: 100%;
+			height: 100vh;
+
+			ul {
+				position: absolute;
+				background-color: $white;
+				width: 70vw;
+				height: 100vh;
+				padding: 5rem 1.5rem;
+			}
+
+			li {
+				margin-bottom: 1rem;
+			}
+
+			a {
+				color: $very-dark-blue;
+				font-weight: 700;
+			}
+		}
+
+		&-nav.active {
+			display: block;
 		}
 	}
 }
