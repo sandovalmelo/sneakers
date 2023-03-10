@@ -49,6 +49,21 @@ a {
     display: flex;
     align-items: center;
     gap: 1rem; }
+  .menu-cart {
+    position: relative; }
+  .menu .cart-itens {
+    position: absolute;
+    top: -10px;
+    left: 8px;
+    background-color: #ff7d1a;
+    color: white;
+    font-size: 0.65rem;
+    width: 22px;
+    height: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   .menu-avatar {
     width: 25px;
     height: 25px; }

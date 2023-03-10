@@ -17,6 +17,25 @@
 		gap: 1rem;
 	}
 
+	&-cart {
+		position: relative;
+	}
+
+	.cart-itens {
+		position: absolute;
+		top: -10px;
+		left: 8px;
+		background-color: $orange;
+		color: $white;
+		font-size: 0.65rem;
+		width: 22px;
+		height: 15px;
+		border-radius: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 	&-avatar {
 		width: 25px;
 		height: 25px;
