@@ -42,6 +42,8 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem; }
+  .menu-nav li {
+    color: #68707d; }
   .menu-user-info {
     margin-left: auto;
     display: flex;
@@ -58,6 +60,24 @@ a {
     left: 0;
     background-color: white;
     display: none; } }
+@media (min-width: 900px) {
+  .menu {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 1.75rem 0;
+    gap: 4rem;
+    border-bottom: solid 1px #b6bcc8; }
+    .menu-icon {
+      display: none;
+      visibility: hidden; }
+    .menu-nav ul {
+      display: flex;
+      gap: 1.5rem; }
+    .menu-user-info {
+      gap: 2rem; }
+    .menu-avatar {
+      width: 50px;
+      height: 50px; } }
 .product-thumbs {
   display: none;
   visibility: hidden; }
@@ -109,6 +129,7 @@ a {
   .product {
     max-width: 70rem;
     margin: 0 auto;
+    padding: 6rem 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem; }
