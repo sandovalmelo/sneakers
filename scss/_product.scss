@@ -1,4 +1,9 @@
 .product {
+	&-thumbs {
+		display: none;
+		visibility: hidden;
+	}
+
 	&-info {
 		padding: 1.5rem;
 	}
@@ -57,6 +62,31 @@
 				position: absolute;
 				bottom: 7px;
 			}
+		}
+	}
+}
+
+@media (min-width: 900px) {
+	.product {
+		max-width: 70rem;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 4rem;
+
+		&-image {
+			max-width: 30rem;
+			img {
+				margin-bottom: 1rem;
+				border-radius: 16px;
+			}
+		}
+
+		&-thumbs {
+			visibility: visible;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 1rem;
 		}
 	}
 }

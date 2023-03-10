@@ -58,6 +58,9 @@ a {
     left: 0;
     background-color: white;
     display: none; } }
+.product-thumbs {
+  display: none;
+  visibility: hidden; }
 .product-info {
   padding: 1.5rem; }
 .product-company {
@@ -101,5 +104,23 @@ a {
       height: 1px;
       position: absolute;
       bottom: 7px; }
+
+@media (min-width: 900px) {
+  .product {
+    max-width: 70rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem; }
+    .product-image {
+      max-width: 30rem; }
+      .product-image img {
+        margin-bottom: 1rem;
+        border-radius: 16px; }
+    .product-thumbs {
+      visibility: visible;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem; } }
 
 /*# sourceMappingURL=styles.css.map */
