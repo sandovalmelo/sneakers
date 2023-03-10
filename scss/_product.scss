@@ -64,6 +64,30 @@
 			}
 		}
 	}
+
+	&-add-to-cart {
+		background-color: $light-grayish-blue;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		height: 2.75rem;
+		border-radius: 8px;
+		margin-bottom: 1rem;
+		overflow: hidden;
+
+		span {
+			display: grid;
+			place-items: center;
+			color: $very-dark-blue;
+			font-weight: 700;
+		}
+
+		button {
+			border: none;
+			display: grid;
+			place-items: center;
+			background-color: $light-grayish-blue;
+		}
+	}
 }
 
 @media (min-width: 900px) {

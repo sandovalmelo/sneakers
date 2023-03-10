@@ -144,6 +144,24 @@ a {
       height: 1px;
       position: absolute;
       bottom: 7px; }
+.product-add-to-cart {
+  background-color: #f7f8fd;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 2.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden; }
+  .product-add-to-cart span {
+    display: grid;
+    place-items: center;
+    color: #1d2025;
+    font-weight: 700; }
+  .product-add-to-cart button {
+    border: none;
+    display: grid;
+    place-items: center;
+    background-color: #f7f8fd; }
 
 @media (min-width: 900px) {
   .product {
