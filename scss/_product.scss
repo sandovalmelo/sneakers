@@ -141,5 +141,11 @@
 				font-size: 0.85rem;
 			}
 		}
+
+		&-buy {
+			display: grid;
+			grid-template-columns: repeat(2, auto);
+			gap: 1rem;
+		}
 	}
 }

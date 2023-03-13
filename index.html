@@ -12,7 +12,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600;700&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./css/styles.css" />
@@ -37,11 +37,45 @@
 			</nav>
 			<div class="menu-user-info">
 				<div class="menu-cart">
-					<span class="cart-itens">3</span>
+					<span class="cart-itens" id="cart-itens">3</span>
 					<img src="./images/icon-cart.svg" alt="Cart Icon" />
 				</div>
 				<div class="menu-avatar">
 					<img src="./images/image-avatar.png" alt="Avatar" />
+				</div>
+			</div>
+			<div class="cart-container">
+				<div class="cart-details">
+					<div class="cart-title">
+						<h2>Cart</h2>
+					</div>
+					<div class="cart-details-container">
+						<div class="details">
+							<div class="img">
+								<img
+									src="./images/image-product-1-thumbnail.jpg"
+									alt="Sneakers Thumbnail"
+									class="cart-thumb"
+								/>
+							</div>
+							<div class="description">
+								<h3>Fall Limited Edition Sneakers</h3>
+								<div class="price">
+									<span class="product-price-cart">$125.00 x</span>
+									<span class="product-quantity">3</span>
+									<span class="product-total">$375.00</span>
+								</div>
+							</div>
+							<img
+								src="./images/icon-delete.svg"
+								alt="Delete Icon"
+								class="delete-icon"
+							/>
+						</div>
+						<div class="checkout">
+							<button class="btn">Checkout</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -78,7 +112,7 @@
 							<img src="./images/icon-plus.svg" alt="Plus Icon" />
 						</button>
 					</div>
-					<button class="btn">
+					<button class="btn" id="add-to-cart">
 						<img src="./images/icon-cart-white.svg" alt="White Cart Icon" />
 						Add to cart
 					</button>
