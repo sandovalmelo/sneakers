@@ -11,6 +11,10 @@
 		}
 	}
 
+	&-cart {
+		position: relative;
+	}
+
 	&-user-info {
 		margin-left: auto;
 		display: flex;
@@ -25,6 +29,11 @@
 		padding: 10px;
 		z-index: 50;
 		width: 100%;
+		display: none;
+	}
+
+	.cart-container.active {
+		display: block;
 	}
 
 	.cart-details-container {

@@ -45,6 +45,8 @@ a {
   position: relative; }
   .menu-nav li {
     color: #68707d; }
+  .menu-cart {
+    position: relative; }
   .menu-user-info {
     margin-left: auto;
     display: flex;
@@ -56,7 +58,10 @@ a {
     left: 0;
     padding: 10px;
     z-index: 50;
-    width: 100%; }
+    width: 100%;
+    display: none; }
+  .menu .cart-container.active {
+    display: block; }
   .menu .cart-details-container {
     padding: 1.5rem; }
   .menu .cart-details {
