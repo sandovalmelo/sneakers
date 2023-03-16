@@ -15,6 +15,9 @@ const cartDetails = document.getElementById("cart-details");
 const menuCart = document.getElementById("menu-cart");
 const deleteIcon = document.getElementById("delete-icon");
 
+const cartQuantity = document.getElementById("cart-quantity");
+const cartTotal = document.getElementById("cart-total");
+
 menuNav.addEventListener("click", (event) => {
 	if (!event.target.closest("#nav-list")) {
 		menuNav.classList.remove("active");
@@ -36,8 +39,10 @@ menuIcon.addEventListener("click", (event) => {
 });
 
 plusBtn.addEventListener("click", (event) => {
-	quantity++;
-	productQuantity.innerText = quantity;
+	if (quantity <= 9) {
+		quantity++;
+		productQuantity.innerText = quantity;
+	}
 });
 
 minusBtn.addEventListener("click", (event) => {
@@ -50,9 +55,14 @@ minusBtn.addEventListener("click", (event) => {
 addToCartBtn.addEventListener("click", (event) => {
 	cartDetails.classList.remove("empty");
 	cartItems.classList.add("active");
+	console.log(cartItems.innerText);
 	cartItems.innerText = quantity;
+	cartQuantity.innerText = quantity;
+	cartTotal.innerText = `$ ${quantity * 125}.00`;
 
 	if (quantity === 0) {
+		cartItems.classList.remove("active");
+		cartDetails.classList.toggle("empty");
 		cartItems.classList.remove("active");
 	}
 });
@@ -63,4 +73,5 @@ menuCart.addEventListener("click", (event) => {
 
 deleteIcon.addEventListener("click", (event) => {
 	cartDetails.classList.toggle("empty");
+	cartItems.classList.remove("active");
 });
