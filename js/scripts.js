@@ -21,6 +21,7 @@ const cartTotal = document.getElementById("cart-total");
 const sliderContainer = document.getElementById("slider-container");
 const nextBtn = document.getElementById("next-btn");
 const prevBtn = document.getElementById("prev-btn");
+const productThumbs = Array.from(document.querySelectorAll("#product-thumbs img"));
 
 menuNav.addEventListener("click", (event) => {
 	if (!event.target.closest("#nav-list")) {
@@ -96,4 +97,12 @@ prevBtn.addEventListener("click", (event) => {
 		const total = distance * activeSlider;
 		sliderContainer.style.transform = `translateX(-${total - sliderContainer.clientWidth}px)`;
 	}
+});
+
+productThumbs.forEach((thumb) => {
+	thumb.addEventListener("click", (event) => {
+		const distance = sliderContainer.clientWidth;
+		const positionNum = parseInt(event.target.dataset.position - 1);
+		sliderContainer.style.transform = `translateX(-${distance * positionNum}px)`;
+	});
 });
