@@ -11,7 +11,9 @@ let quantity = 1;
 const addToCartBtn = document.getElementById("add-to-cart");
 const cartItems = document.getElementById("cart-itens");
 const cartContainer = document.getElementById("cart-container");
+const cartDetails = document.getElementById("cart-details");
 const menuCart = document.getElementById("menu-cart");
+const deleteIcon = document.getElementById("delete-icon");
 
 menuNav.addEventListener("click", (event) => {
 	if (!event.target.closest("#nav-list")) {
@@ -46,6 +48,7 @@ minusBtn.addEventListener("click", (event) => {
 });
 
 addToCartBtn.addEventListener("click", (event) => {
+	cartDetails.classList.remove("empty");
 	cartItems.classList.add("active");
 	cartItems.innerText = quantity;
 
@@ -56,4 +59,8 @@ addToCartBtn.addEventListener("click", (event) => {
 
 menuCart.addEventListener("click", (event) => {
 	cartContainer.classList.toggle("active");
+});
+
+deleteIcon.addEventListener("click", (event) => {
+	cartDetails.classList.toggle("empty");
 });

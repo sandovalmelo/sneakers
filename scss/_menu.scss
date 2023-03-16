@@ -88,6 +88,28 @@
 				margin-left: auto;
 			}
 		}
+
+		.cart-empty {
+			display: none;
+		}
+	}
+
+	.cart-details.empty {
+		.cart-details-container {
+			display: none;
+		}
+
+		.cart-empty {
+			display: flex;
+			height: 158px;
+			align-items: center;
+			justify-content: center;
+
+			h3 {
+				font-size: 1rem;
+				color: $dark-grayish-blue;
+			}
+		}
 	}
 
 	.cart-itens {
