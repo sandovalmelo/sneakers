@@ -55,11 +55,12 @@ a {
   .menu .cart-container {
     position: absolute;
     top: 73px;
-    left: 0;
+    right: 0;
     padding: 10px;
     z-index: 50;
     width: 100%;
-    display: none; }
+    display: none;
+    max-width: 400px; }
   .menu .cart-container.active {
     display: block; }
   .menu .cart-details-container {
@@ -172,7 +173,12 @@ a {
       gap: 2rem; }
     .menu-avatar {
       width: 50px;
-      height: 50px; } }
+      height: 50px; }
+    .menu .cart-container {
+      top: 84px;
+      right: -80px; }
+    .menu .cart-details {
+      box-shadow: 0 2px 20px -4px rgba(0, 0, 0, 0.4); } }
 .product-thumbs {
   display: none;
   visibility: hidden; }

@@ -55,7 +55,6 @@ minusBtn.addEventListener("click", (event) => {
 addToCartBtn.addEventListener("click", (event) => {
 	cartDetails.classList.remove("empty");
 	cartItems.classList.add("active");
-	console.log(cartItems.innerText);
 	cartItems.innerText = quantity;
 	cartQuantity.innerText = quantity;
 	cartTotal.innerText = `$ ${quantity * 125}.00`;
