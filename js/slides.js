@@ -1,8 +1,3 @@
-const plusBtn = document.getElementById("add");
-const minusBtn = document.getElementById("minus");
-const productQuantity = document.getElementById("quantity");
-let quantity = 1;
-
 // const sliderContainer = document.getElementById("slider-container");
 // const sliderItems = document.getElementById("slides");
 // const slides = document.getElementsByClassName("slide");
@@ -23,9 +18,9 @@ let quantity = 1;
 // sliderItems.appendChild(cloneFirst);
 // sliderItems.insertBefore(cloneLast, firstSlide);
 
-// const nextBtn = document.getElementById("next-btn");
-// const prevBtn = document.getElementById("prev-btn");
-// const productThumbs = Array.from(document.querySelectorAll("#product-thumbs img"));
+const nextBtn = document.getElementById("next-btn");
+const prevBtn = document.getElementById("prev-btn");
+const productThumbs = Array.from(document.querySelectorAll("#product-thumbs img"));
 
 // function shiftSlide(direction) {
 // 	sliderItems.classList.add("shifting");
@@ -50,20 +45,6 @@ let quantity = 1;
 // prevBtn.addEventListener("click", (event) => {
 // 	shiftSlide(-1);
 // });
-
-plusBtn.addEventListener("click", (event) => {
-	if (quantity <= 9) {
-		quantity++;
-		productQuantity.innerText = quantity;
-	}
-});
-
-minusBtn.addEventListener("click", (event) => {
-	if (quantity > 0) {
-		quantity--;
-		productQuantity.innerText = quantity;
-	}
-});
 
 let activeSlider = 1;
 

@@ -8,6 +8,11 @@ const deleteIcon = document.getElementById("delete-icon");
 const cartQuantity = document.getElementById("cart-quantity");
 const cartTotal = document.getElementById("cart-total");
 
+const plusBtn = document.getElementById("add");
+const minusBtn = document.getElementById("minus");
+const productQuantity = document.getElementById("quantity");
+let quantity = 1;
+
 addToCartBtn.addEventListener("click", (event) => {
 	cartDetails.classList.remove("empty");
 	cartItems.classList.add("active");
@@ -29,4 +34,18 @@ menuCart.addEventListener("click", (event) => {
 deleteIcon.addEventListener("click", (event) => {
 	cartDetails.classList.toggle("empty");
 	cartItems.classList.remove("active");
+});
+
+plusBtn.addEventListener("click", (event) => {
+	if (quantity <= 9) {
+		quantity++;
+		productQuantity.innerText = quantity;
+	}
+});
+
+minusBtn.addEventListener("click", (event) => {
+	if (quantity > 0) {
+		quantity--;
+		productQuantity.innerText = quantity;
+	}
 });
