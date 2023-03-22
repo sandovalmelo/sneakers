@@ -180,14 +180,21 @@ a {
     .menu .cart-details {
       box-shadow: 0 2px 20px -4px rgba(0, 0, 0, 0.4); } }
 .product-slider {
-  position: relative;
-  overflow: hidden; }
+  width: 480px;
+  height: 480px;
+  position: relative; }
   .product-slider .slider-container {
+    width: 480px;
+    height: 480px;
+    overflow: hidden; }
+  .product-slider .slides {
     display: flex;
     position: relative;
     top: 0;
-    left: 0;
-    transition: all 500ms; }
+    left: -480px; }
+  .product-slider .slide {
+    width: 480px;
+    height: 480px; }
   .product-slider button {
     background-color: white;
     border: none;
@@ -282,14 +289,12 @@ a {
     .product-image {
       max-width: 30rem; }
     .product-slider {
-      margin-bottom: 1rem;
-      border-radius: 16px;
-      overflow: hidden; }
+      border-radius: 16px; }
     .product-thumbs img {
       border-radius: 16px; }
     .product-thumbs {
       visibility: visible;
-      display: grid;
+      display: none;
       grid-template-columns: repeat(4, 1fr);
       gap: 1rem; }
     .product-name {
