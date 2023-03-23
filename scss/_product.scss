@@ -165,9 +165,9 @@
 
 @media (min-width: 900px) {
 	.product {
-		max-width: 70rem;
+		max-width: 71rem;
 		margin: 0 auto;
-		padding: 6rem 0;
+		padding: 6rem 1rem;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 4rem;

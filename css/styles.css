@@ -168,9 +168,9 @@ a {
     display: block; } }
 @media (min-width: 900px) {
   .menu {
-    max-width: 70rem;
+    max-width: 71rem;
     margin: 0 auto;
-    padding: 1.75rem 0;
+    padding: 1.75rem 1rem;
     gap: 4rem;
     border-bottom: solid 1px #b6bcc8; }
     .menu-icon {
@@ -337,9 +337,9 @@ a {
 
 @media (min-width: 900px) {
   .product {
-    max-width: 70rem;
+    max-width: 71rem;
     margin: 0 auto;
-    padding: 6rem 0;
+    padding: 6rem 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem; }
