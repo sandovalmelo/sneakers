@@ -143,6 +143,10 @@
 		&-icon {
 			z-index: 150;
 			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 1rem;
+			padding: 0.5rem;
 		}
 
 		&-logo {

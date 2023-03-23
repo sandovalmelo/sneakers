@@ -131,7 +131,11 @@ a {
 @media (max-width: 899px) {
   .menu-icon {
     z-index: 150;
-    position: absolute; }
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+    padding: 0.5rem; }
   .menu-logo {
     margin-left: 2rem; }
   .menu-nav {
