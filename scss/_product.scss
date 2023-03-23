@@ -148,6 +148,17 @@
 			display: grid;
 			place-items: center;
 			background-color: $light-grayish-blue;
+
+			&:hover {
+				cursor: pointer;
+				svg {
+					fill: $light-orange;
+				}
+			}
+
+			svg {
+				fill: $orange;
+			}
 		}
 	}
 }

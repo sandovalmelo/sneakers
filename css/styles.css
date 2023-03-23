@@ -33,6 +33,9 @@ a {
   height: 2.75rem;
   width: 100%;
   border-radius: 8px; }
+  .btn:hover {
+    background-color: #ffae6b;
+    cursor: pointer; }
   .btn img {
     width: 18px;
     height: 18px; }
@@ -325,6 +328,12 @@ a {
     display: grid;
     place-items: center;
     background-color: #f7f8fd; }
+    .product-add-to-cart button:hover {
+      cursor: pointer; }
+      .product-add-to-cart button:hover svg {
+        fill: #ffae6b; }
+    .product-add-to-cart button svg {
+      fill: #ff7d1a; }
 
 @media (min-width: 900px) {
   .product {
