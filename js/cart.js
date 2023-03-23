@@ -29,6 +29,7 @@ addToCartBtn.addEventListener("click", (event) => {
 
 menuCart.addEventListener("click", (event) => {
 	cartContainer.classList.toggle("active");
+	menuCart.classList.toggle("open");
 });
 
 deleteIcon.addEventListener("click", (event) => {

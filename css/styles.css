@@ -47,6 +47,10 @@ a {
     color: #68707d; }
   .menu-cart {
     position: relative; }
+    .menu-cart svg {
+      fill: #68707d; }
+  .menu-cart.open svg {
+    fill: black; }
   .menu-user-info {
     margin-left: auto;
     display: flex;
@@ -176,8 +180,16 @@ a {
     .menu-user-info {
       gap: 2rem; }
     .menu-avatar {
-      width: 50px;
-      height: 50px; }
+      width: 52px;
+      height: 52px;
+      border: solid 2px transparent; }
+      .menu-avatar:hover {
+        border-radius: 50%;
+        border: solid 2px #ff7d1a;
+        cursor: pointer; }
+    .menu-cart svg:hover {
+      cursor: pointer;
+      fill: black; }
     .menu .cart-container {
       top: 84px;
       right: -80px; }
