@@ -384,6 +384,9 @@ a {
       display: grid;
       grid-template-columns: repeat(2, auto);
       gap: 1rem; } }
+.overlay[data-open="false"] {
+  display: none; }
+
 .overlay {
   background-color: rgba(0, 0, 0, 0.75);
   position: absolute;
@@ -391,7 +394,7 @@ a {
   left: 0;
   width: 100%;
   height: 100vh;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center; }
   .overlay .close-overlay {
