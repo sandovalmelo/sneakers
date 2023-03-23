@@ -62,3 +62,22 @@ a {
 		height: 18px;
 	}
 }
+
+.slider-btn {
+	background-color: $white;
+	border: none;
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	img {
+		margin-bottom: 0;
+		width: 10px;
+	}
+}
