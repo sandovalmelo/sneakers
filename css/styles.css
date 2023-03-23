@@ -352,6 +352,11 @@ a {
         display: none; }
     .product-thumbs img {
       border-radius: 16px; }
+      .product-thumbs img:hover {
+        filter: opacity(50%);
+        cursor: pointer; }
+    .product-thumbs img[data-active="true"] {
+      filter: opacity(50%); }
     .product-thumbs {
       visibility: visible;
       display: grid;

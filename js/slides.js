@@ -5,7 +5,8 @@ const slides = document.getElementsByClassName("slide");
 const slidesLength = slides.length;
 const nextBtn = document.getElementById("next-btn");
 const prevBtn = document.getElementById("prev-btn");
-const productThumbs = Array.from(document.querySelectorAll("#product-thumbs img"));
+// const productThumbs = Array.from(document.querySelectorAll("#product-thumbs img"));
+const productThumbs = document.getElementById("product-thumbs");
 
 const firstSlide = slides[0];
 const lastSlide = slides[slidesLength - 1];
@@ -34,7 +35,7 @@ function shiftSlide(direction) {
 			index--;
 		}
 	}
-	console.log(index);
+
 	allowShift = false;
 }
 
@@ -70,10 +71,19 @@ prevBtn.addEventListener("click", (event) => {
 
 sliderItems.addEventListener("transitionend", checkIndex);
 
-productThumbs.forEach((thumb) => {
-	thumb.addEventListener("click", (event) => {
-		const positionNum = parseInt(event.target.dataset.position - 1);
-		shiftSlideThumbs(positionNum);
+productThumbs.addEventListener("click", (event) => {
+	const position = event.target.dataset.position;
+	const index = position - 1;
+	const images = Array.from(productThumbs.children);
+
+	shiftSlideThumbs(index);
+
+	images.forEach((image, imageIndex) => {
+		if (imageIndex === index) {
+			image.setAttribute("data-active", "true");
+		} else {
+			image.setAttribute("data-active", "false");
+		}
 	});
 });
 
