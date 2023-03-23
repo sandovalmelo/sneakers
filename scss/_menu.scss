@@ -6,7 +6,7 @@
 	position: relative;
 
 	&-nav {
-		li {
+		a {
 			color: $dark-grayish-blue;
 		}
 	}
@@ -186,7 +186,6 @@
 			}
 
 			a {
-				color: $very-dark-blue;
 				font-weight: 700;
 			}
 		}
@@ -214,6 +213,28 @@
 			ul {
 				display: flex;
 				gap: 1.5rem;
+			}
+
+			a {
+				position: relative;
+				&:hover {
+					color: $black;
+					cursor: pointer;
+					&:after {
+						background-color: $orange;
+					}
+				}
+
+				&:after {
+					content: "";
+					display: inline-block;
+					background-color: transparent;
+					width: 100%;
+					height: 4px;
+					position: absolute;
+					top: 3.75rem;
+					left: 0;
+				}
 			}
 		}
 
