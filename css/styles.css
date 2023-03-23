@@ -180,21 +180,36 @@ a {
     .menu .cart-details {
       box-shadow: 0 2px 20px -4px rgba(0, 0, 0, 0.4); } }
 .product-slider {
-  width: 480px;
-  height: 480px;
   position: relative;
   overflow: hidden; }
-  .product-slider .slider-container {
-    width: 480px;
-    height: 480px; }
+  @media (max-width: 899px) {
+    .product-slider {
+      height: 100%;
+      width: 100%; } }
+  @media (min-width: 900px) {
+    .product-slider {
+      height: 480px;
+      width: 480px; } }
+  @media (max-width: 899px) {
+    .product-slider .slider-container {
+      height: 100%;
+      width: 100%; } }
+  @media (min-width: 900px) {
+    .product-slider .slider-container {
+      height: 480px;
+      width: 480px; } }
   .product-slider .slides {
     display: flex;
     position: relative;
-    top: 0;
-    left: -480px; }
-  .product-slider .slide {
-    width: 480px;
-    height: 480px; }
+    top: 0; }
+  @media (max-width: 899px) {
+    .product-slider .slide {
+      height: 100%;
+      width: 100%; } }
+  @media (min-width: 900px) {
+    .product-slider .slide {
+      height: 480px;
+      width: 480px; } }
   .product-slider .slides.shifting {
     transition: left 0.2s ease; }
   .product-slider button {

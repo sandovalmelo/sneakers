@@ -1,5 +1,5 @@
 const sliderContainer = document.getElementById("slider-container");
-const distance = sliderContainer.clientWidth;
+let distance = sliderContainer.clientWidth;
 const sliderItems = document.getElementById("slides");
 const slides = document.getElementsByClassName("slide");
 const slidesLength = slides.length;
@@ -15,10 +15,10 @@ const cloneLast = lastSlide.cloneNode(true);
 let index = 0;
 let allowShift = true;
 let posInitial;
-let posFinal;
 
 sliderItems.appendChild(cloneFirst);
 sliderItems.insertBefore(cloneLast, firstSlide);
+sliderItems.style.left = `-${sliderContainer.clientWidth}px`;
 
 function shiftSlide(direction) {
 	sliderItems.classList.add("shifting");
@@ -34,7 +34,7 @@ function shiftSlide(direction) {
 			index--;
 		}
 	}
-
+	console.log(index);
 	allowShift = false;
 }
 
@@ -75,4 +75,9 @@ productThumbs.forEach((thumb) => {
 		const positionNum = parseInt(event.target.dataset.position - 1);
 		shiftSlideThumbs(positionNum);
 	});
+});
+
+window.addEventListener("resize", () => {
+	distance = sliderContainer.clientWidth;
+	sliderItems.style.left = `-${(index + 1) * sliderContainer.clientWidth}px`;
 });
