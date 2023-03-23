@@ -5,7 +5,6 @@ const slides = document.getElementsByClassName("slide");
 const slidesLength = slides.length;
 const nextBtn = document.getElementById("next-btn");
 const prevBtn = document.getElementById("prev-btn");
-// const productThumbs = Array.from(document.querySelectorAll("#product-thumbs img"));
 const productThumbs = document.getElementById("product-thumbs");
 
 const firstSlide = slides[0];
