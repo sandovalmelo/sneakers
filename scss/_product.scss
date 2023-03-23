@@ -10,23 +10,13 @@
 	}
 }
 
-// $slide-width: 100%;
-// $slide-height: 100%;
-
-// $slide-width: 480px;
-// $slide-height: 480px;
-
 .product {
 	&-slider {
-		// width: $slide-width;
-		// height: $slide-height;
 		@include slide-size;
 		position: relative;
 		overflow: hidden;
 
 		.slider-container {
-			// width: $slide-width;
-			// height: $slide-height;
 			@include slide-size;
 		}
 
@@ -34,12 +24,9 @@
 			display: flex;
 			position: relative;
 			top: 0;
-			// left: -$slide-width;
 		}
 
 		.slide {
-			// width: $slide-width;
-			// height: $slide-height;
 			@include slide-size;
 		}
 
