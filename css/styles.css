@@ -384,10 +384,10 @@ a {
       display: grid;
       grid-template-columns: repeat(2, auto);
       gap: 1rem; } }
-.overlay[data-open="false"] {
+.fullscreen[data-open="false"] {
   display: none; }
 
-.overlay {
+.fullscreen {
   background-color: rgba(0, 0, 0, 0.75);
   position: absolute;
   top: 0;
@@ -397,16 +397,16 @@ a {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .overlay .close-overlay {
+  .fullscreen .close-fullscreen {
     cursor: pointer;
     margin-left: auto;
     margin-bottom: 1rem;
     width: 18px; }
-  .overlay-slider {
+  .fullscreen-slider {
     height: 480px;
     width: 480px;
     position: relative; }
-  .overlay-wrarpper {
+  .fullscreen-wrarpper {
     height: 480px;
     width: 480px;
     position: absolute;
@@ -414,24 +414,24 @@ a {
     left: 0;
     overflow: hidden;
     border-radius: 16px; }
-  .overlay .slides {
+  .fullscreen .slides {
     height: 480px;
     width: 480px;
     display: flex;
     position: absolute;
     top: 0;
     left: -480px; }
-  .overlay .prev-btn-overlay {
+  .fullscreen .prev-btn-fullscreen {
     left: -1.5rem; }
-  .overlay .next-btn-overlay {
+  .fullscreen .next-btn-fullscreen {
     right: -1.5rem; }
-  .overlay .thumbs {
+  .fullscreen .thumbs {
     width: 480px;
     padding: 2rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem; }
-    .overlay .thumbs img {
+    .fullscreen .thumbs img {
       border-radius: 8px; }
 
 /*# sourceMappingURL=styles.css.map */

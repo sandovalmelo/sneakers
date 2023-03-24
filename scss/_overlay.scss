@@ -1,8 +1,8 @@
-.overlay[data-open="false"] {
+.fullscreen[data-open="false"] {
 	display: none;
 }
 
-.overlay {
+.fullscreen {
 	background-color: $black-opacity;
 	position: absolute;
 	top: 0;
@@ -13,7 +13,7 @@
 	align-items: center;
 	justify-content: center;
 
-	.close-overlay {
+	.close-fullscreen {
 		cursor: pointer;
 		margin-left: auto;
 		margin-bottom: 1rem;
@@ -45,11 +45,11 @@
 		left: -480px;
 	}
 
-	.prev-btn-overlay {
+	.prev-btn-fullscreen {
 		left: -1.5rem;
 	}
 
-	.next-btn-overlay {
+	.next-btn-fullscreen {
 		right: -1.5rem;
 	}
 
