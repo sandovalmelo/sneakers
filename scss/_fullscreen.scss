@@ -65,13 +65,12 @@
 		gap: 2rem;
 
 		div {
-			border: 2px solid $orange;
 			border-radius: 8px;
 			overflow: hidden;
 			background-color: $white;
 
-			img {
-				&:hover {
+			&:hover {
+				img {
 					filter: opacity(50%);
 					cursor: pointer;
 				}
@@ -79,8 +78,9 @@
 		}
 
 		div[data-active="true"] {
+			border: 2px solid $orange;
 			img {
-				filter: opacity(50%);
+				filter: opacity(30%);
 			}
 		}
 	}
