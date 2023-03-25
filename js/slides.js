@@ -6,7 +6,6 @@ const prevBtn = document.getElementById("prev-btn");
 const productThumbs = document.getElementById("product-thumbs");
 
 let distance = sliderContainer.clientWidth;
-// console.log(distance);
 
 function slide(container, items, prev, next, thumbs) {
 	const slides = items.getElementsByClassName("slide");
@@ -16,8 +15,6 @@ function slide(container, items, prev, next, thumbs) {
 	const cloneFirst = firstSlide.cloneNode(true);
 	const cloneLast = lastSlide.cloneNode(true);
 
-	console.log(container.clientWidth);
-	distance = container.clientWidth;
 	let index = 0;
 	let allowShift = true;
 	let posInitial;
@@ -77,12 +74,11 @@ function slide(container, items, prev, next, thumbs) {
 	items.addEventListener("transitionend", checkIndex);
 
 	thumbs.addEventListener("click", (event) => {
-		const position = event.target.dataset.position;
+		const position = parseInt(event.target.parentElement.dataset.position);
 		const index = position - 1;
 		const images = Array.from(thumbs.children);
 
 		shiftSlideThumbs(index);
-		console.log(images);
 
 		images.forEach((image, imageIndex) => {
 			if (imageIndex === index) {
