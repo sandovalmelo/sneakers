@@ -1,92 +1,102 @@
 const sliderContainer = document.getElementById("slider-container");
-let distance = sliderContainer.clientWidth;
 const sliderItems = document.getElementById("slides");
-const slides = document.getElementsByClassName("slide");
-const slidesLength = slides.length;
+
 const nextBtn = document.getElementById("next-btn");
 const prevBtn = document.getElementById("prev-btn");
 const productThumbs = document.getElementById("product-thumbs");
 
-const firstSlide = slides[0];
-const lastSlide = slides[slidesLength - 1];
-const cloneFirst = firstSlide.cloneNode(true);
-const cloneLast = lastSlide.cloneNode(true);
+let distance = sliderContainer.clientWidth;
+// console.log(distance);
 
-let index = 0;
-let allowShift = true;
-let posInitial;
+function slide(container, items, prev, next, thumbs) {
+	const slides = items.getElementsByClassName("slide");
+	const slidesLength = slides.length;
+	const firstSlide = slides[0];
+	const lastSlide = slides[slidesLength - 1];
+	const cloneFirst = firstSlide.cloneNode(true);
+	const cloneLast = lastSlide.cloneNode(true);
 
-sliderItems.appendChild(cloneFirst);
-sliderItems.insertBefore(cloneLast, firstSlide);
-sliderItems.style.left = `-${sliderContainer.clientWidth}px`;
+	console.log(container.clientWidth);
+	distance = container.clientWidth;
+	let index = 0;
+	let allowShift = true;
+	let posInitial;
 
-function shiftSlide(direction) {
-	sliderItems.classList.add("shifting");
+	items.appendChild(cloneFirst);
+	items.insertBefore(cloneLast, firstSlide);
+	items.style.left = `-${container.clientWidth}px`;
 
-	if (allowShift) {
-		posInitial = sliderItems.offsetLeft;
+	function shiftSlide(direction) {
+		items.classList.add("shifting");
 
-		if (direction === 1) {
-			sliderItems.style.left = `${posInitial - distance}px`;
-			index++;
-		} else if (direction === -1) {
-			sliderItems.style.left = `${posInitial + distance}px`;
-			index--;
+		if (allowShift) {
+			posInitial = items.offsetLeft;
+
+			if (direction === 1) {
+				items.style.left = `${posInitial - distance}px`;
+				index++;
+			} else if (direction === -1) {
+				items.style.left = `${posInitial + distance}px`;
+				index--;
+			}
 		}
+
+		allowShift = false;
 	}
 
-	allowShift = false;
-}
-
-function shiftSlideThumbs(position) {
-	sliderItems.classList.add("shifting");
-	sliderItems.style.left = `-${(position + 1) * distance}px`;
-	allowShift = false;
-}
-
-function checkIndex() {
-	sliderItems.classList.remove("shifting");
-
-	if (index === -1) {
-		sliderItems.style.left = `-${slidesLength * distance}px`;
-		index = slidesLength - 1;
+	function shiftSlideThumbs(position) {
+		items.classList.add("shifting");
+		items.style.left = `-${(position + 1) * distance}px`;
+		allowShift = false;
 	}
 
-	if (index === slidesLength) {
-		sliderItems.style.left = `-${1 * distance}px`;
-		index = 0;
-	}
+	function checkIndex() {
+		items.classList.remove("shifting");
 
-	allowShift = true;
-}
-
-nextBtn.addEventListener("click", (event) => {
-	shiftSlide(1);
-});
-
-prevBtn.addEventListener("click", (event) => {
-	shiftSlide(-1);
-});
-
-sliderItems.addEventListener("transitionend", checkIndex);
-
-productThumbs.addEventListener("click", (event) => {
-	const position = event.target.dataset.position;
-	const index = position - 1;
-	const images = Array.from(productThumbs.children);
-
-	shiftSlideThumbs(index);
-
-	images.forEach((image, imageIndex) => {
-		if (imageIndex === index) {
-			image.setAttribute("data-active", "true");
-		} else {
-			image.setAttribute("data-active", "false");
+		if (index === -1) {
+			items.style.left = `-${slidesLength * distance}px`;
+			index = slidesLength - 1;
 		}
+
+		if (index === slidesLength) {
+			items.style.left = `-${1 * distance}px`;
+			index = 0;
+		}
+
+		allowShift = true;
+	}
+
+	next.addEventListener("click", (event) => {
+		shiftSlide(1);
 	});
-});
 
-window.addEventListener("resize", () => {
-	distance = sliderContainer.clientWidth;
-	sliderItems.style.left = `-${(index + 1) * sliderContainer.clientWidth}px`;
-});
+	prev.addEventListener("click", (event) => {
+		shiftSlide(-1);
+	});
+
+	items.addEventListener("transitionend", checkIndex);
+
+	thumbs.addEventListener("click", (event) => {
+		const position = event.target.dataset.position;
+		const index = position - 1;
+		const images = Array.from(thumbs.children);
+
+		shiftSlideThumbs(index);
+		console.log(images);
+
+		images.forEach((image, imageIndex) => {
+			if (imageIndex === index) {
+				image.setAttribute("data-active", "true");
+			} else {
+				image.setAttribute("data-active", "false");
+			}
+		});
+	});
+
+	window.addEventListener("resize", () => {
+		distance = sliderContainer.clientWidth;
+		sliderItems.style.left = `-${(index + 1) * sliderContainer.clientWidth}px`;
+	});
+}
+
+slide(sliderContainer, sliderItems, prevBtn, nextBtn, productThumbs);
