@@ -14,6 +14,7 @@ function slide(container, items, prev, next, thumbs) {
 	const lastSlide = slides[slidesLength - 1];
 	const cloneFirst = firstSlide.cloneNode(true);
 	const cloneLast = lastSlide.cloneNode(true);
+	const thumbsNails = Array.from(thumbs.children);
 
 	let index = 0;
 	let allowShift = true;
@@ -21,7 +22,7 @@ function slide(container, items, prev, next, thumbs) {
 
 	items.appendChild(cloneFirst);
 	items.insertBefore(cloneLast, firstSlide);
-	items.style.left = `-${container.clientWidth}px`;
+	items.style.left = `-${distance}px`;
 
 	function shiftSlide(direction) {
 		items.classList.add("shifting");
@@ -38,6 +39,13 @@ function slide(container, items, prev, next, thumbs) {
 			}
 		}
 
+		thumbsNails.forEach((thumb, thumbIndex) => {
+			thumb.setAttribute("data-active", "false");
+			if (index === thumbIndex) {
+				thumb.setAttribute("data-active", "true");
+			}
+		});
+
 		allowShift = false;
 	}
 
@@ -45,6 +53,7 @@ function slide(container, items, prev, next, thumbs) {
 		items.classList.add("shifting");
 		items.style.left = `-${(position + 1) * distance}px`;
 		allowShift = false;
+		index = position;
 	}
 
 	function checkIndex() {
@@ -76,11 +85,10 @@ function slide(container, items, prev, next, thumbs) {
 	thumbs.addEventListener("click", (event) => {
 		const position = parseInt(event.target.parentElement.dataset.position);
 		const index = position - 1;
-		const images = Array.from(thumbs.children);
 
 		shiftSlideThumbs(index);
 
-		images.forEach((image, imageIndex) => {
+		thumbsNails.forEach((image, imageIndex) => {
 			if (imageIndex === index) {
 				image.setAttribute("data-active", "true");
 			} else {
