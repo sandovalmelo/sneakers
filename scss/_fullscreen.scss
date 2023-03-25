@@ -45,6 +45,10 @@
 		left: -480px;
 	}
 
+	.slides.shifting {
+		transition: left 0.2s ease;
+	}
+
 	.prev-btn-fullscreen {
 		left: -1.5rem;
 	}

@@ -181,10 +181,26 @@
 				<div class="fullscreen-slider">
 					<div class="fullscreen-wrarpper" id="fullscreen-wrarpper">
 						<div class="slides" id="fullscreen-slides">
-							<img src="./images/image-product-1.jpg" alt="Product Image 1" />
-							<img src="./images/image-product-2.jpg" alt="Product Image 2" />
-							<img src="./images/image-product-3.jpg" alt="Product Image 3" />
-							<img src="./images/image-product-4.jpg" alt="Product Image 4" />
+							<img
+								src="./images/image-product-1.jpg"
+								alt="Product Image 1"
+								data-active="true"
+								class="slide" />
+							<img
+								src="./images/image-product-2.jpg"
+								alt="Product Image 2"
+								data-active="false"
+								class="slide" />
+							<img
+								src="./images/image-product-3.jpg"
+								alt="Product Image 3"
+								data-active="false"
+								class="slide" />
+							<img
+								src="./images/image-product-4.jpg"
+								alt="Product Image 4"
+								data-active="false"
+								class="slide" />
 						</div>
 					</div>
 					<button class="slider-btn next-btn-fullscreen" id="next-btn-fullscreen">
@@ -194,7 +210,7 @@
 						<img src="./images/icon-previous.svg" alt="Previous Button" />
 					</button>
 				</div>
-				<div class="thumbs">
+				<div class="thumbs" id="fullscreen-thumbs">
 					<img src="./images/image-product-1-thumbnail.jpg" alt="Product Thumbnail 1" />
 					<img src="./images/image-product-2-thumbnail.jpg" alt="Product Thumbnail 2" />
 					<img src="./images/image-product-3-thumbnail.jpg" alt="Product Thumbnail 3" />
