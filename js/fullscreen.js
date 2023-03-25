@@ -25,3 +25,9 @@ fullscreen.addEventListener("click", (event) => {
 });
 
 slide(fullscreenWrarpper, fullscreenSlides, prevBtnFullscreen, nextBtnFullscreen, fullscreenThumbs);
+
+window.addEventListener("resize", (event) => {
+	if (window.innerWidth < 900) {
+		fullscreen.setAttribute("data-open", "false");
+	}
+});
