@@ -62,11 +62,13 @@ function slide(container, items, prev, next, thumbs) {
 		if (index === -1) {
 			items.style.left = `-${slidesLength * distance}px`;
 			index = slidesLength - 1;
+			thumbsNails[index].setAttribute("data-active", "true");
 		}
 
 		if (index === slidesLength) {
 			items.style.left = `-${1 * distance}px`;
 			index = 0;
+			thumbsNails[index].setAttribute("data-active", "true");
 		}
 
 		allowShift = true;
