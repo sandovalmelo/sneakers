@@ -14,10 +14,23 @@
 	justify-content: center;
 
 	.close-fullscreen {
+		display: flex;
+		justify-content: flex-end;
 		cursor: pointer;
 		margin-left: auto;
-		margin-bottom: 1rem;
-		width: 18px;
+		margin-bottom: 1.5rem;
+
+		svg {
+			width: 18px;
+			height: 18px;
+			fill: $white;
+		}
+
+		&:hover {
+			svg {
+				fill: $orange;
+			}
+		}
 	}
 
 	&-slider {

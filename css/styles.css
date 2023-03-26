@@ -402,10 +402,17 @@ a {
   align-items: center;
   justify-content: center; }
   .fullscreen .close-fullscreen {
+    display: flex;
+    justify-content: flex-end;
     cursor: pointer;
     margin-left: auto;
-    margin-bottom: 1rem;
-    width: 18px; }
+    margin-bottom: 1.5rem; }
+    .fullscreen .close-fullscreen svg {
+      width: 18px;
+      height: 18px;
+      fill: white; }
+    .fullscreen .close-fullscreen:hover svg {
+      fill: #ff7d1a; }
   .fullscreen-slider {
     height: 480px;
     width: 480px;
