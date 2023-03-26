@@ -3,6 +3,7 @@
 }
 
 .fullscreen {
+	z-index: 80;
 	background-color: $black-opacity;
 	position: absolute;
 	top: 0;

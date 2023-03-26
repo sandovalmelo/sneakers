@@ -228,7 +228,9 @@ a {
       top: 84px;
       right: -80px; }
     .menu .cart-details {
-      box-shadow: 0 2px 20px -4px rgba(0, 0, 0, 0.4); } }
+      box-shadow: 0 2px 20px -4px rgba(0, 0, 0, 0.4); }
+    .menu .delete-icon {
+      cursor: pointer; } }
 .product-slider {
   position: relative;
   overflow: hidden; }
@@ -392,6 +394,7 @@ a {
   display: none; }
 
 .fullscreen {
+  z-index: 80;
   background-color: rgba(0, 0, 0, 0.75);
   position: absolute;
   top: 0;
