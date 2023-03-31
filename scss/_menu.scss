@@ -40,7 +40,7 @@
 		z-index: 50;
 		width: 100%;
 		display: none;
-		max-width: 400px;
+		max-width: 100%;
 	}
 
 	.cart-container.active {
@@ -266,6 +266,7 @@
 		.cart-container {
 			top: 84px;
 			right: -80px;
+			max-width: 25rem;
 		}
 
 		.cart-details {

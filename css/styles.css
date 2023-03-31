@@ -83,7 +83,7 @@ a {
     z-index: 50;
     width: 100%;
     display: none;
-    max-width: 400px; }
+    max-width: 100%; }
   .menu .cart-container.active {
     display: block; }
   .menu .cart-details-container {
@@ -226,7 +226,8 @@ a {
       fill: black; }
     .menu .cart-container {
       top: 84px;
-      right: -80px; }
+      right: -80px;
+      max-width: 25rem; }
     .menu .cart-details {
       box-shadow: 0 2px 20px -4px rgba(0, 0, 0, 0.4); }
     .menu .delete-icon {
