@@ -100,8 +100,6 @@ const slide = (container, items, prev, next, thumbs, resize) => {
 		window.addEventListener("resize", () => {
 			distance = container.clientWidth || sliderContainer.clientWidth;
 			sliderItems.style.left = `-${(index + 1) * distance}px`;
-			console.log(this);
-			console.log(distance);
 		});
 	}
 };
