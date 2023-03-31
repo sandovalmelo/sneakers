@@ -14,7 +14,6 @@ closeFullscreen.addEventListener("click", (event) => {
 sliderItems.addEventListener("click", (event) => {
 	if (window.innerWidth > 899) {
 		fullscreen.setAttribute("data-open", "true");
-		distance = fullscreenWrarpper.clientWidth;
 	}
 });
 
@@ -24,7 +23,14 @@ fullscreen.addEventListener("click", (event) => {
 	}
 });
 
-slide(fullscreenWrarpper, fullscreenSlides, prevBtnFullscreen, nextBtnFullscreen, fullscreenThumbs);
+slide(
+	fullscreenWrarpper,
+	fullscreenSlides,
+	prevBtnFullscreen,
+	nextBtnFullscreen,
+	fullscreenThumbs,
+	false
+);
 
 window.addEventListener("resize", (event) => {
 	if (window.innerWidth < 900) {

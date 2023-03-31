@@ -1,13 +1,10 @@
 const sliderContainer = document.getElementById("slider-container");
 const sliderItems = document.getElementById("slides");
-
 const nextBtn = document.getElementById("next-btn");
 const prevBtn = document.getElementById("prev-btn");
 const productThumbs = document.getElementById("product-thumbs");
 
-let distance = sliderContainer.clientWidth;
-
-function slide(container, items, prev, next, thumbs) {
+const slide = (container, items, prev, next, thumbs, resize) => {
 	const slides = items.getElementsByClassName("slide");
 	const slidesLength = slides.length;
 	const firstSlide = slides[0];
@@ -15,6 +12,7 @@ function slide(container, items, prev, next, thumbs) {
 	const cloneFirst = firstSlide.cloneNode(true);
 	const cloneLast = lastSlide.cloneNode(true);
 	const thumbsNails = Array.from(thumbs.children);
+	let distance = container.clientWidth || sliderContainer.clientWidth;
 
 	let index = 0;
 	let allowShift = true;
@@ -70,7 +68,6 @@ function slide(container, items, prev, next, thumbs) {
 			index = 0;
 			thumbsNails[index].setAttribute("data-active", "true");
 		}
-
 		allowShift = true;
 	}
 
@@ -99,10 +96,14 @@ function slide(container, items, prev, next, thumbs) {
 		});
 	});
 
-	window.addEventListener("resize", () => {
-		distance = sliderContainer.clientWidth;
-		sliderItems.style.left = `-${(index + 1) * sliderContainer.clientWidth}px`;
-	});
-}
+	if (resize) {
+		window.addEventListener("resize", () => {
+			distance = container.clientWidth || sliderContainer.clientWidth;
+			sliderItems.style.left = `-${(index + 1) * distance}px`;
+			console.log(this);
+			console.log(distance);
+		});
+	}
+};
 
-slide(sliderContainer, sliderItems, prevBtn, nextBtn, productThumbs);
+slide(sliderContainer, sliderItems, prevBtn, nextBtn, productThumbs, true);

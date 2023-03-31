@@ -236,16 +236,16 @@ a {
   overflow: hidden; }
   @media (max-width: 899px) {
     .product-slider {
-      height: 100%;
-      width: 100%; } }
+      height: auto;
+      max-width: 100%; } }
   @media (min-width: 900px) {
     .product-slider {
       height: 480px;
       width: 480px; } }
   @media (max-width: 899px) {
     .product-slider .slider-container {
-      height: 100%;
-      width: 100%; } }
+      height: auto;
+      max-width: 100%; } }
   @media (min-width: 900px) {
     .product-slider .slider-container {
       height: 480px;
@@ -256,8 +256,8 @@ a {
     top: 0; }
   @media (max-width: 899px) {
     .product-slider .slide {
-      height: 100%;
-      width: 100%; } }
+      height: auto;
+      max-width: 100%; } }
   @media (min-width: 900px) {
     .product-slider .slide {
       height: 480px;
@@ -396,7 +396,7 @@ a {
 .fullscreen {
   z-index: 80;
   background-color: rgba(0, 0, 0, 0.75);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
